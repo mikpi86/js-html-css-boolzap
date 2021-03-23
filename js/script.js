@@ -4,6 +4,12 @@ Replica della grafica con la possibilità di avere messaggi scritti dall’utent
 
 Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto  */
 
+var app = new Vue ({
+
+  el: '#root'
+  
+});
+
 
 /* contacts: [
 

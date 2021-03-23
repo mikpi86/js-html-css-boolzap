@@ -3,3 +3,45 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  min-width: 400px;
+  min-height: 450px;
+  position: relative;
+}
+
+/* sfondo in secondo piano */
+.green-header {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 150, 136, 255);
+  /* forse */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.gradient-background {
+  width: 100%;
+  height: 100vh;
+  background: rgb(210, 219, 220);
+  background: linear-gradient(0deg, rgba(210, 219, 220, 1) 0%, rgba(221, 219, 209, 1) 100%);
+}
+
+.app-container {
+  width: 70%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 999;
+}
+
+/* debug */
+
+.app-container {
+  background-color: black;
+}
