@@ -4,6 +4,31 @@
   box-sizing: border-box;
 }
 
+/* backgrounds and colors utility */
+.bg-lightgrey {
+  background-color: rgba(234, 234, 234, 255);
+}
+.bg-lightblue {
+  background-color: rgba(142, 218, 252, 255);
+}
+.bg-search-for {
+  background-color: rgba(245, 246, 246, 255);
+}
+.bg-white {
+  background-color: white;
+}
+.bg-send-message-area {
+  background-color: rgba(243, 238, 234, 255);
+}
+.left-border {
+  border-left: 1px solid rgb(187, 187, 187);
+}
+.bg-img-chat-area {
+  background-image: url(../img/mine.jpg);
+  background-size: 50%;
+}
+/* END backgrounds and colors utility */
+
 .main-container {
   width: 100%;
   height: 100vh;
@@ -11,13 +36,15 @@
   min-height: 450px;
   position: relative;
 }
+.padding-10 {
+  padding: 10px;
+}
 
 /* sfondo in secondo piano */
 .green-header {
   width: 100%;
   height: 130px;
   background-color: rgba(0, 150, 136, 255);
-  /* forse */
   position: fixed;
   top: 0;
   left: 0;
@@ -29,6 +56,7 @@
   background: rgb(210, 219, 220);
   background: linear-gradient(0deg, rgba(210, 219, 220, 1) 0%, rgba(221, 219, 209, 1) 100%);
 }
+/* END sfondo in secondo piano */
 
 /* app area */
 .app-container {
@@ -53,6 +81,7 @@
   display: flex;
   flex-direction: column;
 }
+/* END app area */
 
 /* left area */
 .user {
@@ -74,6 +103,7 @@
   width: 100%;
   height: 100%;
 }
+/* END left area */
 
 /* rigth area */
 .chat-header {
@@ -91,13 +121,6 @@
   height: 90px;
   justify-self: end;
 }
+/* END rigth area */
 
 /* debug */
-
-.app-container {
-  background-color: rgb(43, 43, 43);
-}
-
-.white-borders {
-  border: 1px solid white;
-}
