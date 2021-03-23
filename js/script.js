@@ -14,6 +14,8 @@ var app = new Vue({
 
     imageExtension: '.jpg',
 
+    active_chat: 0,
+
     contacts: [
       {
         name: 'Michele',
@@ -103,11 +105,15 @@ var app = new Vue({
 
   methods: {
 
-
+    activate:function(chat){
+        this.active_chat = chat ;
+    }
+    
   }
   
 });
 
 
 
+// per la console di Vue
 Vue.config.devtools = true;

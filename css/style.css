@@ -6,19 +6,19 @@
 
 /* backgrounds and colors utility */
 .bg-lightgrey {
-  background-color: rgba(234, 234, 234, 255);
+  background-color: rgb(234, 234, 234);
 }
 .bg-lightblue {
-  background-color: rgba(142, 218, 252, 255);
+  background-color: rgb(142, 218, 252);
 }
 .bg-search-for {
-  background-color: rgba(245, 246, 246, 255);
+  background-color: rgb(245, 246, 246);
 }
 .bg-white {
   background-color: white;
 }
 .bg-send-message-area {
-  background-color: rgba(243, 238, 234, 255);
+  background-color: rgb(243, 238, 234);
 }
 .left-border {
   border-left: 1px solid rgb(187, 187, 187);
@@ -29,6 +29,9 @@
 }
 .color-lightgrey {
   color: rgb(177, 178, 181);
+}
+.color-darkgrey {
+  color: rgb(122, 122, 122);
 }
 /* END backgrounds and colors utility */
 
@@ -68,6 +71,9 @@
 .font-10 {
   font-size: 10px;
 }
+.font-12 {
+  font-size: 12px;
+}
 .font-17 {
   font-size: 17px;
 }
@@ -92,9 +98,14 @@ img.standard-size {
   width: 50%;
 }
 
+.underlined {
+  text-decoration-line: underline;
+}
+
 li {
   list-style: none;
-  border-bottom: 1px solid rgba(234, 234, 234, 255);
+  border-bottom: 1px solid rgb(234, 234, 234);
+  cursor: pointer;
 }
 
 .fontawesome-size {
@@ -117,7 +128,7 @@ i {
 .green-header {
   width: 100%;
   height: 130px;
-  background-color: rgba(0, 150, 136, 255);
+  background-color: rgb(0, 150, 136);
   position: fixed;
   top: 0;
   left: 0;
@@ -161,10 +172,22 @@ i {
   width: 100%;
   height: 100px;
 }
+.rounded-bell-container {
+  padding: 10px;
+  border-radius: 50px;
+  background-color: rgba(255,255,255,0.7);
+  color: rgb(142, 218, 252);
+  margin-right: 10px;
+}
 
 .search-for {
   width: 100%;
-  height: 70px;
+  height: 50px;
+}
+#search-bar {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
 }
 
 .chat-list {
@@ -174,6 +197,10 @@ i {
 }
 .chat-list > ul > li > img {
   margin: 5px;
+}
+
+.active {
+  background-color: rgb(233, 235, 235);
 }
 /* END left area */
 
@@ -188,11 +215,43 @@ i {
   height: 100%;
   overflow-y: scroll;
 }
+.chat-wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 20px auto 0;
+}
+  /* status messaggi */
+.received-message {
+  background-color: white;
+  align-self: flex-start;
+}
+.sent-message {
+  background-color: rgb(213, 249, 186);
+  align-self: flex-end;
+}
+  /* END status messaggi */
 
 .send-message-area {
   width: 100%;
-  height: 90px;
+  padding: 20px;
+  justify-content: space-between;
+}
+.emoticons, .voice-recorder {
+  width: 10%;
+  text-align: center;
+}
+.message-input-bar > input {
+  padding: 5px;
 }
 /* END rigth area */
 
 /* debug */
+
+.message-box {
+  max-width: 300px;
+  min-width: 100px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}

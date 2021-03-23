@@ -50,14 +50,20 @@
             <div class="notifications flex align-center padding-10 bg-lightblue font-15">
 
                <!-- font awesome -->
-               <!-- titolo -->
-               <!-- cliccabile -->
+               <div class="rounded-bell-container fontawesome-size">
+                  <i class="fas fa-bell-slash"></i>
+               </div>
+
+               <div class="notification-text">
+                  <div class="font-12">Ricevi notifiche di nuovi messaggi</div>
+                  <div class="font-10 color-darkgrey underlined">Attiva notifiche desktop</div>
+               </div>
 
             </div>
             <!-- sezione ricerca -->
             <div class="search-for padding-10 bg-search-for">
 
-               <!-- search area -->
+               <input type="search" id="search-bar" placeholder="Cerca o inizia una nuova chat">
 
             </div>
             <!-- sezione lista chat -->
@@ -65,7 +71,7 @@
 
                <ul>
 
-                  <li v-for="contact in contacts" class="flex padding-10 font-17">
+                  <li v-for="contact in contacts" class="flex padding-10 font-17" @click="activate" :class="{ active : active_chat}">
                      <img :src="imagePath + contact.avatar + imageExtension" class="standard-size" alt="">
                      <div class="margin-left-right-5">{{contact.name}}</div>
                   </li>
@@ -102,13 +108,58 @@
             <!-- area della chat -->
             <div class="chat-main-area bg-img-chat-area ">
 
+               <div class="chat-wrapper flex flex-column">
+
+                  <!-- tentativo fallito di stampa messaggi -->
+                  <!-- <div v-for="messages in contacts" class="message-box">{{messages}}</div> -->
+
+                  <div class="message-box received-message">
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum necessitatibus, totam repellendus sequi aliquam fugit ducimus delectus ab, vero ad libero omnis. Esse quia consequuntur nihil, eius quod commodi ea?
+                  </div>
+
+                  <div class="message-box sent-message">
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+
+                  <div class="message-box received-message">
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum necessitatibus, totam repellendus sequi aliquam fugit ducimus delectus ab, vero ad libero omnis. Esse quia consequuntur nihil, eius quod commodi ea?  
+                  </div>
+
+                  <div class="message-box sent-message">
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+
+                  <div class="message-box received-message">
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum necessitatibus, totam repellendus sequi aliquam fugit ducimus delectus ab, vero ad libero omnis. Esse quia consequuntur nihil, eius quod commodi ea?
+                  </div>
+
+                  <div class="message-box sent-message">
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+
+                  <div class="message-box received-message">
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum necessitatibus, totam repellendus sequi aliquam fugit ducimus delectus ab, vero ad libero omnis. Esse quia consequuntur nihil, eius quod commodi ea?  
+                  </div>
+
+                  <div class="message-box sent-message">
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+
+               </div>
+
             </div>
             <!-- sezione invio messaggio -->
-            <div class="send-message-area flex align-center justify-self-end padding-10 bg-send-message-area">
+            <div class="send-message-area flex align-center justify-self-end bg-send-message-area">
 
-               <!-- font awesome -->
-               <!-- text area -->
-               <!-- font awesome -->
+               <div class="emoticons fontawesome-size color-darkgrey">
+                  <i class="far fa-smile"></i>
+               </div>
+               <div class="message-input-bar">
+                  <input type="text" placeholder="Scrivi un messaggio">
+               </div>
+               <div class="voice-recorder fontawesome-size color-darkgrey">
+                  <i class="fas fa-microphone"></i>
+               </div>             
  
             </div>
 
