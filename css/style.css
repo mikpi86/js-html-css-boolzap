@@ -15,7 +15,7 @@
 /* sfondo in secondo piano */
 .green-header {
   width: 100%;
-  height: 80px;
+  height: 130px;
   background-color: rgba(0, 150, 136, 255);
   /* forse */
   position: fixed;
@@ -30,18 +30,74 @@
   background: linear-gradient(0deg, rgba(210, 219, 220, 1) 0%, rgba(221, 219, 209, 1) 100%);
 }
 
+/* app area */
 .app-container {
-  width: 70%;
-  height: 90%;
+  width: 80%;
+  height: 95%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 999;
+  display: flex;
+}
+.left-container {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.right-container {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* left area */
+.user {
+  width: 100%;
+  height: 90px;
+}
+
+.notifications {
+  width: 100%;
+  height: 100px;
+}
+
+.search-for {
+  width: 100%;
+  height: 70px;
+}
+
+.chat-list {
+  width: 100%;
+  height: 100%;
+}
+
+/* rigth area */
+.chat-header {
+  width: 100%;
+  height: 90px;
+}
+
+.chat-main-area {
+  width: 100%;
+  height: 100%;
+}
+
+.send-message-area {
+  width: 100%;
+  height: 90px;
+  justify-self: end;
 }
 
 /* debug */
 
 .app-container {
-  background-color: black;
+  background-color: rgb(43, 43, 43);
+}
+
+.white-borders {
+  border: 1px solid white;
 }
