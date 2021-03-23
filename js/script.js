@@ -10,6 +10,10 @@ var app = new Vue({
 
   data: {
 
+    imagePath: 'img/avatar',
+
+    imageExtension: '.jpg',
+
     contacts: [
       {
         name: 'Michele',
@@ -95,8 +99,15 @@ var app = new Vue({
       },
     ]
     
+  },
+
+  methods: {
+
+
   }
   
 });
+
+
 
 Vue.config.devtools = true;

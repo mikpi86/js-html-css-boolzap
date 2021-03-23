@@ -64,34 +64,15 @@
             <div class="chat-list bg-white">
 
                <ul>
-                  <li class="flex padding-10 font-17">
-                     <img src="img/avatar_1.jpg" class="standard-size" alt="">
-                     <div class="margin-left-right-5">Michele</div>
+
+                  <li v-for="contact in contacts" class="flex padding-10 font-17">
+                     <img :src="imagePath + contact.avatar + imageExtension" class="standard-size" alt="">
+                     <div class="margin-left-right-5">{{contact.name}}</div>
                   </li>
-
-                  <!-- <li> -->
-                     <!-- img -->
-                     <!-- nome contatto -->
-                  <!-- </li> -->
-                  
-                  <!-- <li> -->
-                     <!-- img -->
-                     <!-- nome contatto -->
-                  <!-- </li> -->                 
-      
-                  <!-- <li> -->
-                     <!-- img -->
-                     <!-- nome contatto -->
-                  <!-- </li> -->
-
-                  <!-- <li> -->
-                     <!-- img -->
-                     <!-- nome contatto -->
-                  <!-- </li> -->
 
                </ul>
 
-            </div>
+            </div> <!-- chat list -->
 
          </div> <!-- left container -->
          
