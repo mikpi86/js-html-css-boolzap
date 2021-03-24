@@ -230,8 +230,8 @@ label {
 }
 
 .message-box {
-  max-width: 300px;
-  min-width: 100px;
+  max-width: 400px;
+  min-width: 200px;
   margin-bottom: 10px;
   border-radius: 10px;
   padding: 10px;
@@ -245,7 +245,13 @@ label {
   background-color: rgb(213, 249, 186);
   align-self: flex-end;
 }
-  /* END status messaggi */
+/* END status messaggi */
+.date-style {
+  font-size: 8px;
+  margin-top: 5px;
+  text-align: right;
+}
+
 
 .send-message-area {
   width: 100%;

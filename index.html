@@ -109,7 +109,10 @@
 
                <div class="chat-wrapper flex flex-column">
 
-                  <div v-for="(message, status) in contacts[active_chat].messages" class="message-box" :class="(message.status == 'sent') ? 'sent-message' : 'received-message'">{{message.text}}</div>
+                  <div v-for="(message, status, date) in contacts[active_chat].messages" class="message-box" :class="(message.status == 'sent') ? 'sent-message' : 'received-message'">
+                     <div>{{message.text}}</div>
+                     <div class="date-style color-lightgrey">{{message.date}}</div>
+                  </div>
 
                </div>
 
