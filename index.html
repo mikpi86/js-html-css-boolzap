@@ -111,14 +111,6 @@
 
                   <div v-for="(message, status) in contacts[active_chat].messages" class="message-box" :class="(message.status == 'sent') ? 'sent-message' : 'received-message'">{{message.text}}</div>
 
-<!--                   <div class="message-box received-message">
-                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum necessitatibus, totam repellendus sequi aliquam fugit ducimus delectus ab, vero ad libero omnis. Esse quia consequuntur nihil, eius quod commodi ea?
-                  </div>
-
-                  <div class="message-box sent-message">
-                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  </div> -->
-
                </div>
 
             </div>
@@ -135,8 +127,7 @@
                   <i class="fas fa-microphone"></i>
                </div>             
 
- 
-            </div>
+            </div> <!-- send message area -->
 
          </div> <!-- right container -->
 
