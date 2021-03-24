@@ -118,9 +118,9 @@ var app = new Vue({
 
   methods: {
 
-      isActive(index) {
-        this.active_chat = index;
-      }
+    isActive(index) {
+      this.active_chat = index;
+    }
 
   }
   

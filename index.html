@@ -109,16 +109,15 @@
 
                <div class="chat-wrapper flex flex-column">
 
-                  <!-- tentativo fallito di stampa messaggi -->
-                  <!-- <div v-for="messages in contacts" class="message-box">{{messages}}</div> -->
+                  <div v-for="(message, status) in contacts[active_chat].messages" class="message-box" :class="(message.status == 'sent') ? 'sent-message' : 'received-message'">{{message.text}}</div>
 
-                  <div class="message-box received-message">
+<!--                   <div class="message-box received-message">
                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum necessitatibus, totam repellendus sequi aliquam fugit ducimus delectus ab, vero ad libero omnis. Esse quia consequuntur nihil, eius quod commodi ea?
                   </div>
 
                   <div class="message-box sent-message">
                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  </div>
+                  </div> -->
 
                </div>
 
