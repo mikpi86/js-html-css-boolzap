@@ -21,10 +21,6 @@
 
    <div id="root" class="main-container">
 
-      <!-- sfondo in secondo piano -->
-      <div class="green-header"></div>
-      <div class="gradient-background"></div>
-
       <!-- primo piano -->
       <div class="app-container flex">
 
@@ -63,7 +59,10 @@
             <!-- sezione ricerca -->
             <div class="search-for padding-10 bg-search-for">
 
-               <input type="search" id="search-bar" placeholder="Cerca o inizia una nuova chat">
+               <div class="search-bar-container">
+                  <label for="search-bar"><i class="fas fa-search color-lightgrey fontawesome-size"></i></label>
+                  <input type="search" id="search-bar" placeholder="Cerca o inizia una nuova chat">
+               </div>
 
             </div>
             <!-- sezione lista chat -->
@@ -72,7 +71,7 @@
                <ul>
 
                   <li v-for="contact in contacts" class="flex padding-10 font-17" @click="activate" :class="{ active : active_chat}">
-                     <img :src="imagePath + contact.avatar + imageExtension" class="standard-size" alt="">
+                     <img :src="imagePath + contact.avatar + imageExtension" class="standard-size" :alt="contact.name">
                      <div class="margin-left-right-5">{{contact.name}}</div>
                   </li>
 
@@ -160,6 +159,7 @@
                <div class="voice-recorder fontawesome-size color-darkgrey">
                   <i class="fas fa-microphone"></i>
                </div>             
+
  
             </div>
 
