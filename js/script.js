@@ -118,15 +118,13 @@ var app = new Vue({
 
   methods: {
 
-    activate:function(chat){
-        this.active_chat = chat ;
-    }
-    
+      isActive(index) {
+        this.active_chat = index;
+      }
+
   }
   
 });
-
-
 
 // per la console di Vue
 Vue.config.devtools = true;

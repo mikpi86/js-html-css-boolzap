@@ -180,10 +180,7 @@ i {
   border-radius: 3px;
   display: flex;
 }
-/* label,
-#search-bar {
-  display: inline-block;
-} */
+
 label {
   width: 10%;
   height: 100%;
@@ -204,7 +201,7 @@ label {
   overflow-y: scroll;
 }
 .chat-list > ul > li:hover {
-  background-color: rgb(234, 234, 234);
+  background-color: rgb(247, 247, 247);
 }
 .chat-list > ul > li > img {
   margin: 5px;

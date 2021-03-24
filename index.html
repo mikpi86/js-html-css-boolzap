@@ -70,7 +70,7 @@
 
                <ul>
 
-                  <li v-for="contact in contacts" class="flex padding-10 font-17" @click="activate" :class="{ active : active_chat}">
+                  <li v-for="(contact, index) in contacts" class="flex padding-10 font-17" @click="{{active_chat = index}}" :class="(index == active_chat) ? 'active' : null">
                      <img :src="imagePath + contact.avatar + imageExtension" class="standard-size" :alt="contact.name">
                      <div class="margin-left-right-5">{{contact.name}}</div>
                   </li>
@@ -88,10 +88,10 @@
 
                <div class="contact-wrapper flex align-center">
 
-                  <img src="img/avatar_1.jpg" class="small-size" alt="">
+                  <img :src="imagePath + contacts[active_chat].avatar + imageExtension" class="small-size" alt="">
    
                   <div class="info-contact flex flex-column">
-                     <div class="margin-left-right-5 margin-bottom-5">Michele</div>
+                     <div class="margin-left-right-5 margin-bottom-5">{{contacts[active_chat].name}}</div>
                      <div class="font-10 margin-left-right-5 color-lightgrey">Ultimo accesso oggi alle</div>
                   </div> <!-- info contact -->
 
