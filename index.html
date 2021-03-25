@@ -88,7 +88,7 @@
 
                <div class="contact-wrapper flex align-center">
 
-                  <img :src="imagePath + contacts[active_chat].avatar + imageExtension" class="small-size" alt="">
+                  <img :src="imagePath + contacts[active_chat].avatar + imageExtension" class="small-size" alt="contacts[active_chat].name">
    
                   <div class="info-contact flex flex-column">
                      <div class="margin-left-right-5 margin-bottom-5">{{contacts[active_chat].name}}</div>
@@ -124,7 +124,7 @@
                   <i class="far fa-smile"></i>
                </div>
                <div class="message-input-bar">
-                  <input type="text" placeholder="Scrivi un messaggio">
+                  <input @keyup.enter="sendNewMessage" v-model="newMessage" type="text" placeholder="Scrivi un messaggio">
                </div>
                <div class="voice-recorder fontawesome-size color-darkgrey">
                   <i class="fas fa-microphone"></i>
