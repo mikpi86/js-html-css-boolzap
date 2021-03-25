@@ -122,7 +122,7 @@ var app = new Vue({
       },
     ]
     
-  },
+  }, // chiusura data
 
   methods: {
 
@@ -147,6 +147,7 @@ var app = new Vue({
 
       // assegno il valore dell'input al valore di text
       newMessage_Object.text = this.newMessage;
+      newMessage_Object.date = new Date().toLocaleString();
       console.log(newMessage_Object);
 
       // faccio un push dell'oggetto nella lista dei messaggi
@@ -158,11 +159,11 @@ var app = new Vue({
 
       // stampa risposta (provvisoriamente immediata)
       this.contacts[this.active_chat].messages.push(newReceivedMessage_Object);
+      newReceivedMessage_Object.date = new Date().toLocaleString();
       console.log(this.contacts[this.active_chat].messages);
 
-    },
-  }
-  
+    }, // chiusura sendNewMessage
+  } // chiusura methods 
 });
 
 // per la console di Vue
