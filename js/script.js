@@ -29,13 +29,6 @@ var app = new Vue({
     imageExtension: '.jpg',
 
     newMessage: '',
-
-
-    newReceivedMessage_Object: {
-      date: '',
-      text: 'Ok',
-      status: 'received'
-    },
     
     user: {
       name: 'Michela',
@@ -146,6 +139,12 @@ var app = new Vue({
         status: 'sent'
       };
 
+      let newReceivedMessage_Object = {
+        date: '',
+        text: 'Ok',
+        status: 'received'
+      };
+
       // assegno il valore dell'input al valore di text
       newMessage_Object.text = this.newMessage;
       console.log(newMessage_Object);
@@ -157,6 +156,9 @@ var app = new Vue({
       //ripulisco la barra dell'input
       this.newMessage = '';
 
+      // stampa risposta (provvisoriamente immediata)
+      this.contacts[this.active_chat].messages.push(newReceivedMessage_Object);
+      console.log(this.contacts[this.active_chat].messages);
 
     },
   }
