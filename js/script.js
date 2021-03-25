@@ -157,10 +157,12 @@ var app = new Vue({
       //ripulisco la barra dell'input
       this.newMessage = '';
 
-      // stampa risposta (provvisoriamente immediata)
-      this.contacts[this.active_chat].messages.push(newReceivedMessage_Object);
-      newReceivedMessage_Object.date = new Date().toLocaleString();
-      console.log(this.contacts[this.active_chat].messages);
+      // stampa risposta dopo un secondo
+      setTimeout(() => {
+        this.contacts[this.active_chat].messages.push(newReceivedMessage_Object);
+        newReceivedMessage_Object.date = new Date().toLocaleString();
+        console.log(this.contacts[this.active_chat].messages);
+      }, 1000);
 
     }, // chiusura sendNewMessage
   } // chiusura methods 
