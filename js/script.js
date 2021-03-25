@@ -30,11 +30,12 @@ var app = new Vue({
 
     newMessage: '',
 
-    newMessageObject: {
-        date: '',
-        text: '',
-        status: 'sent'
-      },
+
+    newReceivedMessage_Object: {
+      date: '',
+      text: 'Ok',
+      status: 'received'
+    },
     
     user: {
       name: 'Michela',
@@ -139,19 +140,25 @@ var app = new Vue({
     sendNewMessage() {
       console.log(this.newMessage);
 
+      let newMessage_Object = {
+        date: '',
+        text: '',
+        status: 'sent'
+      };
+
       // assegno il valore dell'input al valore di text
-      this.newMessageObject.text = this.newMessage;
-      console.log(this.newMessageObject);
+      newMessage_Object.text = this.newMessage;
+      console.log(newMessage_Object);
 
       // faccio un push dell'oggetto nella lista dei messaggi
-      this.contacts[this.active_chat].messages.push(this.newMessageObject);
+      this.contacts[this.active_chat].messages.push(newMessage_Object);
       console.log(this.contacts[this.active_chat].messages);
 
       //ripulisco la barra dell'input
       this.newMessage = '';
-      console.log(this.newMessage);
-    },
 
+
+    },
   }
   
 });
