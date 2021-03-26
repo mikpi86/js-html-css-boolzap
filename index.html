@@ -12,6 +12,8 @@
    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
    <!-- link al css -->
    <link rel="stylesheet" href="css/style.css">
+   <!-- link al datejs -->
+   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
    <!-- link a vue js -->
    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
    <title>BoolzApp</title>
@@ -124,7 +126,7 @@
                   <i class="far fa-smile"></i>
                </div>
                <div class="message-input-bar">
-                  <input @keyup.enter="sendNewMessage" v-model="newMessage" type="text" placeholder="Scrivi un messaggio">
+                  <input @keyup.enter="sendNewMessage" v-model="newMessage" type="text" placeholder="Scrivi un messaggio" id="sendMessage">
                </div>
                <div class="voice-recorder fontawesome-size color-darkgrey">
                   <i class="fas fa-microphone"></i>
