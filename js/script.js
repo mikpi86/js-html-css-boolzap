@@ -28,6 +28,8 @@ var app = new Vue({
 
     imageExtension: '.jpg',
 
+    searchbar: '',
+
     newMessage: '',
     
     user: {
@@ -128,9 +130,9 @@ var app = new Vue({
 
     isActive(index) {
       this.active_chat = index;
-    },
+    }, // chiusura isActive
 
-    sendNewMessage() {
+    sendNewMessage() {     
       console.log(this.newMessage);
 
       let newMessage_Object = {
@@ -165,12 +167,32 @@ var app = new Vue({
         newReceivedMessage_Object.date = dayjs().format('DD/MM/YYYY hh:mm:ss'); // con dayjs
         console.log(this.contacts[this.active_chat].messages);
       }, 1000);
-
+      
     }, // chiusura sendNewMessage
 
+    searchContact() {
+      console.log(this.searchbar);
+
+      this.contacts.forEach((element) => {
+        
+        if (element.name.toLowerCase().includes(this.searchbar.toLowerCase())) {
+          element.visible = true;
+        } else {
+          element.visible = false;
+        }
+        
+      });
+
+    }, // chiusura searchContact
+
   }, // chiusura methods 
+
 
 });
 
 // per la console di Vue
 Vue.config.devtools = true;
+
+// v-if per il visible true -- OK
+// v-model nell'input = alla variabile in data -- OK 
+// metodo: se lettera è nell'array ritorna visible true, altrimenti visible false --

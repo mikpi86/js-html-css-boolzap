@@ -63,7 +63,7 @@
 
                <div class="search-bar-container">
                   <label for="search-bar"><i class="fas fa-search color-lightgrey fontawesome-size"></i></label>
-                  <input type="search" id="search-bar" placeholder="Cerca o inizia una nuova chat">
+                  <input type="search" id="search-bar" v-model="searchbar" @keyup="searchContact" placeholder="Cerca o inizia una nuova chat">
                </div>
 
             </div>
@@ -72,7 +72,7 @@
 
                <ul>
 
-                  <li v-for="(contact, index) in contacts" class="flex padding-10 font-17" @click="{{active_chat = index}}" :class="(index == active_chat) ? 'active' : null">
+                  <li v-for="(contact, index) in contacts" class="flex padding-10 font-17" @click="{{active_chat = index}}" :class="(index == active_chat) ? 'active' : null" v-if="contact.visible">
                      <img :src="imagePath + contact.avatar + imageExtension" class="standard-size" :alt="contact.name">
                      <div class="margin-left-right-5">{{contact.name}}</div>
                   </li>
