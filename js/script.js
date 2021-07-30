@@ -31,6 +31,8 @@ var app = new Vue({
     searchbar: '',
 
     newMessage: '',
+
+    last_access: 'Ultimo accesso oggi alle 00:01',
     
     user: {
       name: 'Michela',
@@ -41,7 +43,7 @@ var app = new Vue({
 
     contacts: [
       {
-        name: 'Michele',
+        name: 'Martino',
         avatar: '_1',
         visible: true,
         messages: [{
@@ -107,7 +109,7 @@ var app = new Vue({
       },
 
       {
-        name: 'Luisa',
+        name: 'Luigi',
         avatar: '_4',
         visible: true,
         messages: [{
@@ -166,7 +168,9 @@ var app = new Vue({
         // newReceivedMessage_Object.date = new Date().toLocaleString(); // con new Date javascript
         newReceivedMessage_Object.date = dayjs().format('DD/MM/YYYY hh:mm:ss'); // con dayjs
         console.log(this.contacts[this.active_chat].messages);
-      }, 1000);
+        this.last_access = 'Online';
+      }, 3000);
+
       
     }, // chiusura sendNewMessage
 
@@ -192,7 +196,3 @@ var app = new Vue({
 
 // per la console di Vue
 Vue.config.devtools = true;
-
-// v-if per il visible true -- OK
-// v-model nell'input = alla variabile in data -- OK 
-// metodo: se lettera è nell'array ritorna visible true, altrimenti visible false --
